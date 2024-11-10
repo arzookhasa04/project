@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Blooming Beauties Flower Boutique</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 2.5rem;
+        }
+
+        .order-summary {
+            margin-top: 2rem;
+        }
+
+        .order-summary h2 {
+            color: #333;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .cart-item h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .cart-item .price {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 1rem 0;
+            border-top: 2px solid #4CAF50;
+        }
+
+        .delivery-details {
+            margin-top: 2rem;
+        }
+
+        .delivery-details h2 {
+            color: #333;
+        }
+
+        .delivery-details input,
+        .delivery-details textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .confirm-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .confirm-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Your Cart</h1>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-item">
+                <img src="rose.jpeg" alt="Rose Bouquet">
+                <div>
+                    <h3>Rose Bouquet</h3>
+                    <span class="price">$29.99</span>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="L-shape-table-flower.jpg" alt="Tulip Bouquet">
+                <div>
+                    <h3>Tulip Bouquet</h3>
+                    <span class="price">$24.99</span>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <img src="image-803x1027lily.jpeg" alt="Lilies Bouquet">
+                <div>
+                    <h3>Lilies Bouquet</h3>
+                    <span class="price">$21.99</span>
+                </div>
+            </div>
+            <div class="total">
+                <span>Total:</span>
+                <span>$96.96</span>
+            </div>
+        </div>
+
+        <!-- Delivery Details Section -->
+        <div class="delivery-details">
+            <h2>Delivery Details</h2>
+            <form action="#">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea rows="4" placeholder="Delivery Address" required></textarea>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="Postal Code" required>
+            </form>
+        </div>
+
+        <!-- Confirm Order Button -->
+        <button class="confirm-btn">Confirm Order</button>
+    </div>
+
+</body>
+</html>

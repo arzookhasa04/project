@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flower Shop Menu</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #4CAF50; /* A green color */
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Main Menu */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Category Item Styling */
+.category {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.category h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.category p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.category .btn {
+    background-color: #4CAF50; /* Matching green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.category .btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Blooming Beauties Flower</h1>
+        <p>Bringing you the freshest flowers from the garden to your door.</p>
+    </header>
+
+    <!-- Main Menu Section -->
+    <h1>Blooming Beauties Flower</h1>
+        <p>Bringing you the freshest flowers from the garden to your door.</p>
+    </header>
+
+    <!-- Main Menu Section -->
+    <main class="menu">
+        <section class="category">
+            <img src="https://www.themaevastore.com/cdn/shop/files/Red_Rose_Rogue_Bouquet_Bookey_of_Roses_Red_rose_bookey.jpg?v=1719490556" alt="Roses">
+            <h2>Roses</h2>
+            <p>Our selection of classic and elegant roses for any occasion. Available in many colors and sizes.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+
+        <section class="category">
+            <img src="https://i.etsystatic.com/33391088/r/il/04ddae/5990911183/il_fullxfull.5990911183_45eb.jpg" alt="Tulips">
+            <h2>Tulips</h2>
+            <p>Brighten your day with our vibrant tulips. A perfect gift for spring celebrations.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLav44fPZhAUdGYF3rbZmMttzHPM2vh2TR8w&s" alt="Sunflowers">
+            <h2>Sunflowers</h2>
+            <p>Sunflowers bring happiness and warmth. Perfect for any sunny occasion.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCLgMefVtOsVb5ypOPads--M8cI-AJezGVA&s" alt="Lilies">
+            <h2>Lilies</h2>
+            <p>Elegant and aromatic lilies, perfect for adding grace and beauty to any space.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3oO6j6SyN4775RKMFm7peSmAgw5iFnzyKw&s" alt="Orchids">
+            <h2>Orchids</h2>
+            <p>Exotic orchids for that special touch of elegance and luxury.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPj9RHSIUVNhUdAWsP1r7c4FVjRvEmCH0IyQ&s" alt="Daisies">
+            <h2>Daisies</h2>
+            <p>Cheerful daisies to brighten up any occasion, available in a variety of colors.</p>
+            <button class="btn">Shop Now</button>
+        </section>
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_QXiQcNrdbTaZO5iAq0-yU_kK_E4KHkes9Q&s" alt="marigold">
+            <h2>Marigold</h2>
+            <p>Feel the freshness of marigolds</p>
+            <button class="btn">Shop now</button>
+        </section>
+        <section class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0hg0SYv2YyspQ3yTvVBTA7MAeb-W6OspPGw&s" alt="Dahlia">
+            <h2>Dahlia</h2>
+            <p>Here your fav ones!</p>
+            <button class="btn">Add to Cart</button>
+        </section>
+    </main>
+
+
+       
+
+    <script>
+        // Initialize cart from local storage or create an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Function to add item to the cart
+        function addToCart(name, price) {
+            const item = { name, price: parseFloat(price) };
+            cart.push(item);  // Add item to the cart array
+            localStorage.setItem('cart', JSON.stringify(cart)); // Save cart to local storage
+            alert(`${name} has been added to your cart.`);
+        }
+
+        // Attach click event to "Add to Cart" buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const name = event.target.getAttribute('data-name');
+                const price = event.target.getAttribute('data-price');
+                addToCart(name, price);
+            });
+        });
+    </script>
+</body>
+</html>

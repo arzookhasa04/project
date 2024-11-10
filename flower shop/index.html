@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blooming Flowers - Flower Shop</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Blooming Flowers</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Cart Button with Item Count -->
+            <a href="cart.html">
+                <button id="cart-button" class="cart-button">
+                    🛒 Cart (<span id="cart-count">*</span>)
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Beautiful Blooms Delivered Fresh</h2>
+            <p>Your favorite flowers, handpicked and delivered with love!</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products container">
+        <h2>Our Bestsellers</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.pinimg.com/originals/68/e5/59/68e55968b9a805a17d6cd279f3d1205b.jpg" alt="Rose Bouquet">
+                <h3>Rose Bouquet</h3>
+                <p>$29.99</p>
+                <!-- Hidden checkbox to trigger notification -->
+                <input type="checkbox" id="rose-checkbox" class="add-to-cart-checkbox">
+                <a href="cart.html" class="btn">Add to cart</a>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSOrWpGU_vafgNScMbHZyI9BAADjpnyb67yqX4IR_epEEKUqvB20QmeYBEKr1FUI8qfmo&usqp=CAU" alt="Lily Bouquet">
+                <h3>Lily Bouquet</h3>
+                <p>$19.99</p>
+                <input type="checkbox" id="lily-checkbox" class="add-to-cart-checkbox">
+                <a href="cart.html" class="btn">Add to cart</a>
+            </div>
+            <div class="product-card">
+                <img src="https://www.floweruk.co.uk/urunler/red-tulip-bouquet.jpg" alt="Tulip Bouquet">
+                <h3>Tulip Bouquet</h3>
+                <p>$24.99</p>
+                <input type="checkbox" id="tulip-checkbox" class="add-to-cart-checkbox">
+                <a href="cart.html" class="btn">Add to cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal Section -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+            <div id="cart-total">
+                <h4>Total: $<span id="total-price">0.00</span></h4>
+            </div>
+            <button id="close-cart">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Blooming Flowers. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Notification for Adding Item to Cart -->
+    <div id="notification" class="notification">Item Added to Cart</div>
+
+    <style>
+        /* Body and layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .products {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        .cart-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Notification Styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display:none;
+            animation-duration: 5sec;
+            z-index: 1000;
+        }
+
+        /* Checkbox Hidden Trigger */
+        .add-to-cart-checkbox {
+            display:inline-block;;
+        }
+
+        /* Show Notification on Checkbox Checked */
+        .add-to-cart-checkbox:checked ~ .add-to-cart + #notification {
+            display: block;
+            animation: showNotification 3s forwards;
+        }
+
+        @keyframes showNotification {
+            0% {
+                opacity: 0;
+                top: 20px;
+            }
+            100% {
+                opacity: 1;
+                top: 60px;
+            }
+        }
+    </style>
+
+</body>
+</html>
